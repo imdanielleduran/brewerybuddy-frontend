@@ -1,0 +1,35 @@
+@use "./variables";
+@use "./mixins";
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+}
+
+main.page {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 48px auto;
+  padding: 0 var(--space-lg);
+}
+
+section.card { @include mixins.card; }
+
+button.primary {
+  appearance: none;
+  border: 1px solid var(--brand);
+  background: var(--brand);
+  color: #08120d;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+button.primary:disabled { opacity: 0.6; cursor: not-allowed; }
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }

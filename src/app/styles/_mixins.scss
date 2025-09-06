@@ -1,0 +1,15 @@
+@mixin card {
+  background: var(--panel);
+  border: 1px solid #1f232a;
+  border-radius: var(--radius);
+  padding: var(--space-lg);
+}
+
+@mixin input {
+  border: 1px solid #2a2f37;
+  background: #0e1014;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 10px 12px;
+  outline: none;
+}
